@@ -1,4 +1,4 @@
-package samples.java;
+package groovy.samples.coerciveclosures;
 
 public interface UtilityMethods {
 	int[] oddArray(int[] numArray);

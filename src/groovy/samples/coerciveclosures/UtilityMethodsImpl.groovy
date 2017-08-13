@@ -1,6 +1,5 @@
-package groovy.samples
+package groovy.samples.coerciveclosures
 
-import samples.java.UtilityMethods
 import java.security.spec.PKCS8EncodedKeySpec
 
 class UtilityMethodsImpl implements UtilityMethods {

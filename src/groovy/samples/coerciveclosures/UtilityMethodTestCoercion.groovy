@@ -1,12 +1,9 @@
-package groovy.samples.test
+package groovy.samples.coerciveclosures
 
 import static org.junit.Assert.*
 
 import org.junit.Before
 import org.junit.Test
-
-import groovy.samples.UtilityMethodsImpl
-import samples.java.UtilityMethods
 
 class UtilityMethodTestCoercion  extends GroovyTestCase{
 	UtilityMethods impl;

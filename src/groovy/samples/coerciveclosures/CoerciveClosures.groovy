@@ -1,3 +1,4 @@
+package groovy.samples.coerciveclosures
 def strings= "this is a string"
 List splits = strings.split(' ')
 println( splits.class.name)
