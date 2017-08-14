@@ -2,14 +2,14 @@ package groovy.samples.switchstatements
 
 def testSwitch(val) {
     def result
-    switch (val) {
+	    switch (val) {
         case ~/^Switch.*Groovy$/:
             result = 'Pattern match'
             break
         case BigInteger:
             result = 'Class isInstance'
             break
-        case 60..90:
+        case 70..90:
             result = 'Range contains'
             break
         case [21, 'test', 9.12]:
@@ -21,6 +21,8 @@ def testSwitch(val) {
         case { it instanceof Integer && it < 50 }:
             result = 'Closure boolean'
             break
+	
+		break
         default:
             result = 'Default'
             break
@@ -41,5 +43,11 @@ res= testSwitch(42.056)
 println res
 res=testSwitch(20)
 println res
+println '======================'
+println ([1..2].class.name)
+def c = new Circle()
+res= testSwitch(c)
+println res
 res= testSwitch('default')
 println res
+println(c in c)

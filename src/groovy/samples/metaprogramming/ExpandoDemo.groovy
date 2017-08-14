@@ -9,5 +9,15 @@ class Cat {
 }
 Cat.metaClass.name="kit"
 
+Cat.metaClass {
+	
+	meow= {->println 'meow'}
+	wag={->println 'wag'}
+	
+}
+
 Cat c= new Cat()
 println (c.name)
+
+ c.wag()
+ c.meow()
