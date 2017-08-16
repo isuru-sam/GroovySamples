@@ -25,9 +25,20 @@ def q = quadruple(5)                     // implicit call
 println "p: ${p}"                        // p is 12
 println "q: ${q}"                        // q is 20
 
+
+
+
+
+
+
+
+
+
+
+/*
 def greeter = { greeting, name -> println "${greeting}, ${name}!" }
 def sayHello = greeter.curry("Hello")
 sayHello("Vamsi") // Hello, Vamsi!
 def sayHi = greeter.curry("Hi")
 sayHi("Vamsi")
-
+*/
