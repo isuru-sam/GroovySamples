@@ -3,7 +3,7 @@ package groovy.samples.closuredelegate
 class ClosureScopeDemo {
 
 	void append(String s) {
-		println "append{$s}"
+		println "append${s}"
 	}
 	
 	void run() {
@@ -16,7 +16,8 @@ class ClosureScopeDemo {
 		def sb=new StringBuffer()
 		//d.owner=this
 		d.delegate=sb
-		d.resolveStrategy=Closure.DELEGATE_FIRST
+		//OWNER_FIRST,DELEGATE_FIRST,OWNER_ONLY,DELEGATE_ONLY
+		d.resolveStrategy=Closure.OWNER_FIRST
 		def e =d()
 		println e
 	}

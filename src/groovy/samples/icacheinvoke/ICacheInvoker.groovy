@@ -8,13 +8,13 @@ Logger.metaClass.methodMissing = {String name,args->
 	println("inside method missing$name")	
 	println(name.toUpperCase())
 		
-	def level = new CustomLevel(name.toUpperCase(),(Level.SEVERE.intValue() + (i++))) 
+	def level = new CustomLevel(name.toUpperCase(),(Level.SEVERE.intValue() + (1))) 
 	
 	def impl = {
 		msg -> delegate.log(level,msg)
 		
 		}
-		Logger.metaClass."$name" = impl
+		Logger.metaClass."${name}" = impl
 		
 	impl(args[0])
 

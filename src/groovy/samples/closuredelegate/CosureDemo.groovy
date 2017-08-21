@@ -1,10 +1,4 @@
 package groovy.samples.closuredelegate
-c= {
-	println 'closure is running'
-}
-
-
-
 d= {
 	
 	append "test1"
@@ -14,7 +8,8 @@ d= {
 
 def buf=new StringBuffer()
 d.delegate=buf
-
+//OWNER_FIRST,OWNER_ONLY,DELEGATE_FIRST,DELEGATE_ONLY
+d.resolveStrategy=Closure.OWNER_FIRST
 
 d()
 println buf

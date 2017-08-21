@@ -18,7 +18,6 @@ println nums
 
 
 def mynums=[2,8,10,20,1,3,9,40]
-
 def slicedmynums1=mynums[1..4]
 def slicedmynums2=mynums[2..<-1]
 println slicedmynums1
@@ -46,3 +45,7 @@ println map.getClass().name
 map.each{key,value->println(key+"-"+value)}
 
 
+/*
+def ans = [:].putAll(map.entrySet().flatten{
+it.value instanceof Map ? it.value.collect{ k, v -> new MapEntry(it.key + '.' + k, v)} : it })
+*/
